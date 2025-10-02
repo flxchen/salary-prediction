@@ -1,5 +1,17 @@
-Residual standard error: 19.61 on 999910 degrees of freedom
-Multiple R-squared:  0.7435,    Adjusted R-squared:  0.7435 
-F-statistic: 3.257e+04 on 89 and 999910 DF,  p-value: < 2.2e-16
-74.35% of the data can be described by the linear model. Since the p value is less than .05. We reject the null hypothesis, and conclude that the added variables 
-do not improve the model.
+LGBM (SHAP values):
+RMSE:18.79
+Positive contributors: CEO, CTO, CFO, OIL, FINANCE, ENGINEERING
+Features with negative influence: JANITOR, EDUCATION, SERVICE, JUNIOR
+Experience and location (yearsExperience, milesFromMetropolis) have minor contributions, with slight negative impacts in SHAP analysis.
+
+Linear Regression (coefficients):
+RMSE:19.59
+Positive coefficients align with higher-level positions and specialized degrees: jobType_CEO, degree_DOCTORAL, industry_OIL, industry_FINANCE.
+Negative coefficients are associated with lower-level positions and less advanced education: jobType_JANITOR, degree_NONE, industry_EDUCATION.
+
+Interpretation
+LGBM outperforms Linear Regression, reducing prediction error by approximately 0.8 RMSE points. 
+This improvement demonstrates the advantage of tree-based models in capturing nonlinear relationships and interactions among features.
+Both models agree that higher-level positions and specialized degrees contribute positively, while lower-level positions and less advanced education has significantly low pay.
+Company-specific identifiers have small but measurable effects.
+LGBM captures nonlinear effects and interactions that Linear Regression cannot, explaining its better RMSE performance.
