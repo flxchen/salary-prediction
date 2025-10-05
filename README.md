@@ -5,10 +5,10 @@ Predict the salaries for the job postings contained in test_features.csv (__1 mi
 2. train_salaries.csv : Each row associates a “jobId” with a “salary”.</li>
 3. test_features.csv : Similar to train_features.csv , each row represents metadata for an individual job.
 ## Model accuracy ##
-interprets model results
+Interprets model results
 ## predict_salary.py ##
 main model training function
-## Process ##
+## How to use ##
 1. download the repository
 2. extract data.zip, move train_features.csv and train_salaries.csv to main project
 3. uncomment optimize(data,50) to fine tune lgbm hyperparameters
